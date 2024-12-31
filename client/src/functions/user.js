@@ -97,3 +97,13 @@ export const userCart = async (cart, authtoken) =>
     
 
     // Function to get the user's saved address
+
+
+
+    export const getUserOrders = async (authtoken) =>
+      await axios.get(`${process.env.REACT_APP_API}/user/orders`, {
+        headers: {
+          authtoken,
+        },
+      });
+    
